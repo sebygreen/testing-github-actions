@@ -5,7 +5,7 @@ const pb = new PocketBase("https://pocketbase.funkysundays.com");
 
 async function getData() {
     return await pb.collection("events").getList(1, 15, {
-        requestKey: "testing",
+        requestKey: null,
         filter: "hidden != true",
     });
 }
