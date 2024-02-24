@@ -5,7 +5,7 @@ const pb = new PocketBase(process.env.POCKETBASE_URL);
 
 async function getData() {
     return await pb.collection("events").getList(1, 15, {
-        requestKey: "events",
+        requestKey: null,
         filter: "hidden!=true",
     });
 }
